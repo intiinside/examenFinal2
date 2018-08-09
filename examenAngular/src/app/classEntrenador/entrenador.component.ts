@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import {EntrenadorInterface} from "../interfaces/entrenador.interface";
+
+
 import {PokemonInterface} from "../interfaces/pokemon.interface";
 import {EntrenadorService} from "../services/entrenador.service";
 import {PokemonService} from "../services/pokemon.service";
@@ -17,6 +20,7 @@ export class EntrenadorComponent implements OnInit {
   }
   ngOnInit() {
     this.entrenador=EntrenadorService.entrenadorSeleccionada;
+
     this.pokemon = this.entrenador.pokemon;
   }
     seleccionarPokemon(pokemon : PokemonInterface){
