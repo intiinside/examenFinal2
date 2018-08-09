@@ -43,7 +43,7 @@
     </div>
     <br>
     <br>
-    <h4>Ingredientes</h4>
+    <h4>Pokemon</h4>
     <div *ngFor="let pokemon of ingredientesComprados">
       <mat-card>
         <div class="row">
@@ -51,11 +51,11 @@
             <img src="{{pokemon.imagenUrl}}" alt="pokemon" style="width: 100%; max-width: 350px">
           </div>
           <div class="col-sm-9">
-            <h3>Ingrediente: {{pokemon.nombreIngrediente}}</h3>
+            <h3>Pokemon: {{pokemon.nombreIngrediente}}</h3>
             <br>
             <div class="row">
               <div class="col-sm-4">
-                <label>Tipo de Ingrediente: {{pokemon.tipoIngrediente}}</label>
+                <label>Poder Pokemon: {{pokemon.tipoIngrediente}}</label>
                 <br>
                 <label>Cantidad: {{pokemon.cantidad}}</label>
               </div>
