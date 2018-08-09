@@ -17,16 +17,16 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="row">
-      <div *ngFor="let comida of comidas" class="col-sm-4">
+      <div *ngFor="let entrenador of entrenador" class="col-sm-4">
         <mat-card class="example-card">
           <mat-card-header>
-            <mat-card-title>Nombre Plato:{{comida.nombreEntrenador}}</mat-card-title>
-            <mat-card-subtitle>Descripción Plato:{{comida.apellidoEntrenador}}</mat-card-subtitle>
+            <mat-card-title>Nombre Entrenador:{{entrenador.nombreEntrenador}}</mat-card-title>
+            <mat-card-subtitle>Descripción Plato:{{entrenador.apellidoEntrenador}}</mat-card-subtitle>
           </mat-card-header>
           <img mat-card-image
-               src={{comida.imagenUrl}}>
+               src="{{entrenador.imagenUrl}}">
           <mat-card-actions>
-            <button mat-button (click)="seleccionarComida(comida)">Seleccionar</button>
+            <button mat-button (click)="seleccionarEntrenador(entrenador)">Seleccionar</button>
           </mat-card-actions>
         </mat-card>
       </div>

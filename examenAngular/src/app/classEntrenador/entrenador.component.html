@@ -1,16 +1,16 @@
-<h2>Nombre Plato:{{comida.nombreEntrenador}}</h2>
+<h2>Nombre Plato:{{entrenador.nombreEntrenador}}</h2>
 <div class="row">
   <div class="col-sm-1"></div>
   <div class="col-sm-3">
-    <h4>Descripción Plato:{{comida.apellidoEntrenador}}</h4>
-    <h4>Nacionalidad:{{comida.fechaNacimiento}}</h4>
-    <h4>N° de Personas:{{comida.numeroMedallas}}</h4>
+    <h4>Descripción Plato:{{entrenador.apellidoEntrenador}}</h4>
+    <h4>Nacionalidad:{{entrenador.fechaNacimiento}}</h4>
+    <h4>N° de Personas:{{entrenador.numeroMedallas}}</h4>
   </div>
   <div class="col-sm-3">
-    <h4>Picante:{{comida.campeonActual}}</h4>
+    <h4>Picante:{{entrenador.campeonActual}}</h4>
   </div>
   <div class="col-sm-5">
-    <img src="{{comida.imagenUrl}}" style="width: 80%;height: 80%">
+    <img src="{{entrenador.imagenUrl}}" style="width: 80%;height: 80%">
   </div>
 </div>
 <br>
@@ -26,7 +26,7 @@
           <div class="col-sm-5">
             <h5>Nombre Pokemon:{{pokemon.nombrePokemon}}</h5>
             <h5>Poder Especial:{{pokemon.poderEspecialDos}}</h5>
-            <button mat-button (click)="seleccionarIngrediente(pokemon)">Seleccionar</button>
+            <button mat-button (click)="seleccionarPokemon(pokemon)">Seleccionar</button>
           </div>
           <div class="col-sm-1"></div>
         </div>

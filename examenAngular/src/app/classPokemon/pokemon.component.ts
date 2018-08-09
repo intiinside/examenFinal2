@@ -1,29 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import {ComidaInterface} from "../interfaces/comida.interface";
-import {ComidaService} from "../services/comida.service";
-import {IngredienteService} from "../services/ingrediente.service";
-import {IngredienteInterface} from "../interfaces/ingrediente.interface";
+import {EntrenadorInterface} from "../interfaces/entrenador.interface";
+
+import {EntrenadorService} from "../services/entrenador.service";
+import {PokemonService} from "../services/pokemon.service";
+import {PokemonInterface} from "../interfaces/pokemon.interface";
 import {CarritoService} from "../services/carrito.service";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-ingrediente',
+  selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
-  providers : [ComidaService,IngredienteService,CarritoService],
+  providers : [EntrenadorService,PokemonService,CarritoService],
   styleUrls: ['./pokemon.component.css']
 })
 export class PokemonComponent implements OnInit {
-  comida:ComidaInterface;
-  pokemon:IngredienteInterface;
-  constructor(private comidaService:ComidaService, private ingredienteService:IngredienteService,private carritoService:CarritoService,private _router: Router
+  entrenador:EntrenadorInterface;
+  pokemon:PokemonInterface;
+  constructor(private entrenadorService:EntrenadorService, private pokemonService:PokemonService, private carritoService:CarritoService, private _router: Router
   ) { }
 
   ngOnInit() {
-    this.comida=ComidaService.comidaSeleccionada;
-    this.pokemon=IngredienteService.ingredienteSeleccionado;
+    this.entrenador=EntrenadorService.entrenadorSeleccionada;
+    this.pokemon=PokemonService.pokemonSeleccionado;
   }
-  agregarAlCarrito(ingrediente:IngredienteInterface){
-    CarritoService.ingredientesDelCarrito.push(ingrediente);
+
+  agregarAlCarrito(pokemon : PokemonInterface){
+
+    CarritoService.pokemonDelCarrito.push(pokemon);
     const url = ['/'];
     this._router.navigate(url);
   }

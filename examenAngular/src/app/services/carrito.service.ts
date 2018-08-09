@@ -1,8 +1,8 @@
 import {Injectable} from "@angular/core";
-import {IngredienteInterface} from "../interfaces/ingrediente.interface";
+import {PokemonInterface} from "../interfaces/pokemon.interface";
 
 @Injectable()
 export class CarritoService {
-  static ingredientesDelCarrito:Array<IngredienteInterface>=[];
+  static pokemonDelCarrito : Array<PokemonInterface>=[];
   constructor(){}
 }

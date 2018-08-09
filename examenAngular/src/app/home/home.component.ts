@@ -1,51 +1,51 @@
 import { Component, OnInit } from '@angular/core';
-import {ComidaInterface} from "../interfaces/comida.interface";
-import {ComidaService} from "../services/comida.service";
-import {IngredienteInterface} from "../interfaces/ingrediente.interface";
-import {IngredienteService} from "../services/ingrediente.service";
+import {EntrenadorInterface} from "../interfaces/entrenador.interface";
+import {EntrenadorService} from "../services/entrenador.service";
+import {PokemonInterface} from "../interfaces/pokemon.interface";
+import {PokemonService} from "../services/pokemon.service";
 import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [IngredienteService,ComidaService]
+  providers: [PokemonService,EntrenadorService]
 })
 export class HomeComponent implements OnInit {
-  ingredientes:Array<IngredienteInterface>;
-  comidas:Array<ComidaInterface>;
+  pokemon:Array<PokemonInterface>;
+  entrenador:Array<EntrenadorInterface>;
   datoABuscar;
-  constructor(private ingredienteService:IngredienteService, private comidaService:ComidaService,private _router: Router){
+  constructor(private pokemonService:PokemonService, private entrenadorService:EntrenadorService, private _router: Router){
   }
   ngOnInit(){
-    this.ingredienteService.obtenerIngredientes()
+    this.pokemonService.obtenerPokemon()
       .subscribe(
         (result:any)=>{
-          this.ingredientes = result;
+          this.pokemon = result;
         }
       );
-    this.comidaService.obtenerComidas()
+    this.entrenadorService.obtenerEntrenador()
       .subscribe(
         (result:any)=>{
-          this.comidas=result;
+          this.entrenador=result;
         }
       );
   }
   cargarDatosbusqueda() {
-    this.ingredienteService.buscarIngredientes(this.datoABuscar).subscribe(
+    this.pokemonService.buscarPokemon(this.datoABuscar).subscribe(
       (result: any[]) => {
-        this.ingredientes = result;
+        this.pokemon = result;
       }
     );
-    this.comidaService.buscarComidas(this.datoABuscar).subscribe(
+    this.entrenadorService.buscarEntrenador(this.datoABuscar).subscribe(
       (result: any[]) => {
-        this.comidas = result;
+        this.entrenador = result;
       }
     );
   }
-  seleccionarComida(comida:ComidaInterface){
-    console.log(comida);
-    ComidaService.comidaSeleccionada=comida;
+  seleccionarEntrenador(entrenador:EntrenadorInterface){
+    console.log(entrenador);
+    EntrenadorService.entrenadorSeleccionada=entrenador;
     const url = ['/classEntrenador'];
     this._router.navigate(url);
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CarritoService} from "../services/carrito.service";
-import {IngredienteService} from "../services/ingrediente.service";
-import {IngredienteInterface} from "../interfaces/ingrediente.interface";
+import {PokemonService} from "../services/pokemon.service";
+import {PokemonInterface} from "../interfaces/pokemon.interface";
 
 @Component({
   selector: 'app-carritocompras',
@@ -10,11 +10,11 @@ import {IngredienteInterface} from "../interfaces/ingrediente.interface";
   providers: [CarritoService]
 })
 export class CarritocomprasComponent implements OnInit {
-  ingredientesComprados:Array<IngredienteInterface>;
+  ingredientesComprados:Array<PokemonInterface>;
   constructor(private carritoService:CarritoService) { }
 
   ngOnInit() {
-    this.ingredientesComprados=CarritoService.ingredientesDelCarrito;
+    this.ingredientesComprados=CarritoService.pokemonDelCarrito;
   }
 
 }

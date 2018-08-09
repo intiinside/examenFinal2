@@ -6,7 +6,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { ComidaComponent } from './classEntrenador/entrenador.component';
+import { EntrenadorComponent } from './classEntrenador/entrenador.component';
 import { HomeComponent } from './home/home.component';
 import { PokemonComponent } from './classPokemon/pokemon.component';
 import { CarritocomprasComponent } from './carritocompras/carritocompras.component';
@@ -23,7 +23,7 @@ import {routes} from "./app.routes";
 @NgModule({
   declarations: [
     AppComponent,
-    ComidaComponent,
+    EntrenadorComponent,
     HomeComponent,
     PokemonComponent,
     CarritocomprasComponent,

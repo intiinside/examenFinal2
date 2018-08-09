@@ -1,11 +1,11 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {ComidaInterface} from "../interfaces/comida.interface";
-import {IngredienteService} from "./ingrediente.service";
+import {EntrenadorInterface} from "../interfaces/entrenador.interface";
+import {PokemonService} from "./pokemon.service";
 
 @Injectable()
-export class ComidaService {
-  public static comidaSeleccionada:ComidaInterface;
+export class EntrenadorService {
+  public static entrenadorSeleccionada:EntrenadorInterface;
   constructor(private http: HttpClient) {
   }
 
@@ -18,11 +18,11 @@ export class ComidaService {
     return headers;
   }
 
-  obtenerComidas() {
-    return this.http.get("http://localhost:1337/classEntrenador", {headers: ComidaService.getCommonHeaders()});
+  obtenerEntrenador() {
+    return this.http.get("http://localhost:1337/classEntrenador", {headers: EntrenadorService.getCommonHeaders()});
   }
-  buscarComidas(parametro){
-    let header = IngredienteService.getCommonHeaders();
+  buscarEntrenador(parametro){
+    let header = PokemonService.getCommonHeaders();
     return this.http.get('http://localhost:1337/classEntrenador?where={"nombreEntrenador":{"contains":"' + parametro+ '"}}'
       ,{headers: header});
   }
