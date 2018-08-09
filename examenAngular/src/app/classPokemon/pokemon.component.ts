@@ -12,15 +12,15 @@ import {Router} from "@angular/router";
   providers : [ComidaService,IngredienteService,CarritoService],
   styleUrls: ['./pokemon.component.css']
 })
-export class IngredienteComponent implements OnInit {
+export class PokemonComponent implements OnInit {
   comida:ComidaInterface;
-  ingrediente:IngredienteInterface;
+  pokemon:IngredienteInterface;
   constructor(private comidaService:ComidaService, private ingredienteService:IngredienteService,private carritoService:CarritoService,private _router: Router
   ) { }
 
   ngOnInit() {
     this.comida=ComidaService.comidaSeleccionada;
-    this.ingrediente=IngredienteService.ingredienteSeleccionado;
+    this.pokemon=IngredienteService.ingredienteSeleccionado;
   }
   agregarAlCarrito(ingrediente:IngredienteInterface){
     CarritoService.ingredientesDelCarrito.push(ingrediente);

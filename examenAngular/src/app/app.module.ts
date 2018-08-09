@@ -8,7 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { ComidaComponent } from './classEntrenador/entrenador.component';
 import { HomeComponent } from './home/home.component';
-import { IngredienteComponent } from './ingrediente/pokemon.component';
+import { PokemonComponent } from './classPokemon/pokemon.component';
 import { CarritocomprasComponent } from './carritocompras/carritocompras.component';
 import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
 import {MatIconModule} from '@angular/material/icon';
@@ -25,7 +25,7 @@ import {routes} from "./app.routes";
     AppComponent,
     ComidaComponent,
     HomeComponent,
-    IngredienteComponent,
+    PokemonComponent,
     CarritocomprasComponent,
     BarraBusquedaComponent
    // NavBarComponent

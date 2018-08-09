@@ -1,5 +1,5 @@
 /**
- * Ingredientes.js
+ * Pokemon.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -8,28 +8,28 @@
 module.exports = {
 
   attributes: {
-    nombreIngrediente:{
+    nombrePokemon:{
       type:'string'
     },
-    cantidad:{
+    numeroPokemon:{
       type:'number'
     },
-    descripcionPreparacion:{
+    poderEspecialUno:{
       type:'string'
     },
-    opcional:{
-      type:'boolean'
-    },
-    tipoIngrediente:{
+    poderEspecialDos:{
       type:'string'
     },
-    necesitaRefrigeracion:{
-      type:'boolean'
+    fechaCaptura:{
+      type:'string'
+    },
+    nivel:{
+      type:'number'
     },
     imagenUrl:{
       type:'string'
     },
-    comidaId:{
+    entrenadorId:{
       model:'entrenador'
     }
   },

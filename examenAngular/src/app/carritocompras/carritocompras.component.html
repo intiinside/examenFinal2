@@ -51,20 +51,20 @@
             <img src="{{pokemon.imagenUrl}}" alt="pokemon" style="width: 100%; max-width: 350px">
           </div>
           <div class="col-sm-9">
-            <h3>Pokemon: {{pokemon.nombreIngrediente}}</h3>
+            <h3>Pokemon: {{pokemon.nombrePokemon}}</h3>
             <br>
             <div class="row">
               <div class="col-sm-4">
-                <label>Poder Pokemon: {{pokemon.tipoIngrediente}}</label>
+                <label>Poder Pokemon: {{pokemon.poderEspecialDos}}</label>
                 <br>
-                <label>Cantidad: {{pokemon.cantidad}}</label>
+                <label>Cantidad: {{pokemon.numeroPokemon}}</label>
               </div>
               <div class="col-sm-4">
-                <label>Descripción Preparación: {{pokemon.descripcionPreparacion}}</label>
-                <label>Necesita refrigeración: {{pokemon.necesitaRefrigeracion===false?'NO':'SI'}}</label>
+                <label>Descripción Preparación: {{pokemon.poderEspecialUno}}</label>
+                <label>Necesita refrigeración: {{pokemon.nivel===false?'NO':'SI'}}</label>
               </div>
               <div class="col-sm-4">
-                <label>Opcional: {{pokemon.opcional===false?'NO':'SI'}}</label>
+                <label>Opcional: {{pokemon.fechaCaptura===false?'NO':'SI'}}</label>
               </div>
             </div>
           </div>

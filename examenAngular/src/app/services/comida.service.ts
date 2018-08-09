@@ -23,7 +23,7 @@ export class ComidaService {
   }
   buscarComidas(parametro){
     let header = IngredienteService.getCommonHeaders();
-    return this.http.get('http://localhost:1337/classEntrenador?where={"nombrePlato":{"contains":"' + parametro+ '"}}'
+    return this.http.get('http://localhost:1337/classEntrenador?where={"nombreEntrenador":{"contains":"' + parametro+ '"}}'
       ,{headers: header});
   }
 }

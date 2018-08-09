@@ -1,5 +1,5 @@
 /**
- * Comida.js
+ * Entrenador.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -8,27 +8,27 @@
 module.exports = {
 
   attributes: {
-    nombrePlato:{
+    nombreEntrenador:{
       type:'string'
     },
-    descripcionPlato:{
+    apellidoEntrenador:{
       type:'string'
     },
-    nacionalidad:{
+    fechaNacimiento:{
       type:'string'
     },
-    numeroPersonas:{
+    numeroMedallas:{
       type:'number'
     },
-    picante:{
+    campeonActual:{
       type:'boolean'
     },
     imagenUrl:{
       type:'string'
     },
-    ingredientes:{
-      collection: 'ingredientes',
-      via:'comidaId'
+    pokemon:{
+      collection: 'pokemon',
+      via:'entrenadorId'
     }
   },
 

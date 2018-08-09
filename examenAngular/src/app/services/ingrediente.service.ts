@@ -16,11 +16,11 @@ export class IngredienteService {
     return headers;
   }
   obtenerIngredientes(){
-    return this.http.get("http://localhost:1337/ingredientes",{headers:IngredienteService.getCommonHeaders()});
+    return this.http.get("http://localhost:1337/pokemon",{headers:IngredienteService.getCommonHeaders()});
   }
   buscarIngredientes(parametro){
     let header = IngredienteService.getCommonHeaders();
-    return this.http.get('http://localhost:1337/ingredientes?where={"nombreIngrediente":{"contains":"' + parametro+ '"}}'
+    return this.http.get('http://localhost:1337/pokemon?where={"nombrePokemon":{"contains":"' + parametro+ '"}}'
       ,{headers: header});
   }
 }

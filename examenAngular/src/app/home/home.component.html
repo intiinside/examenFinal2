@@ -20,8 +20,8 @@
       <div *ngFor="let comida of comidas" class="col-sm-4">
         <mat-card class="example-card">
           <mat-card-header>
-            <mat-card-title>Nombre Plato:{{comida.nombrePlato}}</mat-card-title>
-            <mat-card-subtitle>Descripción Plato:{{comida.descripcionPlato}}</mat-card-subtitle>
+            <mat-card-title>Nombre Plato:{{comida.nombreEntrenador}}</mat-card-title>
+            <mat-card-subtitle>Descripción Plato:{{comida.apellidoEntrenador}}</mat-card-subtitle>
           </mat-card-header>
           <img mat-card-image
                src={{comida.imagenUrl}}>
@@ -46,14 +46,14 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="row">
-      <div *ngFor="let ingrediente of ingredientes" class="col-sm-3">
+      <div *ngFor="let pokemon of pokemon" class="col-sm-3">
         <div class="row">
           <div class="col-sm-6">
-            <img src="{{ingrediente.imagenUrl}}" style="height: 60px; width: 60px">
+            <img src="{{pokemon.imagenUrl}}" style="height: 60px; width: 60px">
           </div>
           <div class="col-sm-5">
-            <h5>Nombre Pokemon:{{ingrediente.nombreIngrediente}}</h5>
-            <h5>Tipo de Pokemon:{{ingrediente.tipoIngrediente}}</h5>
+            <h5>Nombre Pokemon:{{pokemon.nombrePokemon}}</h5>
+            <h5>Tipo de Pokemon:{{pokemon.poderEspecialDos}}</h5>
           </div>
           <div class="col-sm-1"></div>
         </div>

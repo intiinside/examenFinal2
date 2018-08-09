@@ -1,32 +1,32 @@
-<h2>Nombre Plato:{{comida.nombrePlato}}</h2>
+<h2>Nombre Plato:{{comida.nombreEntrenador}}</h2>
 <div class="row">
   <div class="col-sm-1"></div>
   <div class="col-sm-3">
-    <h4>Descripción Plato:{{comida.descripcionPlato}}</h4>
-    <h4>Nacionalidad:{{comida.nacionalidad}}</h4>
-    <h4>N° de Personas:{{comida.numeroPersonas}}</h4>
+    <h4>Descripción Plato:{{comida.apellidoEntrenador}}</h4>
+    <h4>Nacionalidad:{{comida.fechaNacimiento}}</h4>
+    <h4>N° de Personas:{{comida.numeroMedallas}}</h4>
   </div>
   <div class="col-sm-3">
-    <h4>Picante:{{comida.picante}}</h4>
+    <h4>Picante:{{comida.campeonActual}}</h4>
   </div>
   <div class="col-sm-5">
     <img src="{{comida.imagenUrl}}" style="width: 80%;height: 80%">
   </div>
 </div>
 <br>
-<h2>Ingredientes</h2>
+<h2>Pokemon</h2>
 <div class="row">
   <div class="col-sm-12">
     <div class="row">
-      <div *ngFor="let ingrediente of ingredientes" class="col-sm-3">
+      <div *ngFor="let pokemon of pokemon" class="col-sm-3">
         <div class="row">
           <div class="col-sm-6">
-            <img src="{{ingrediente.imagenUrl}}" style="height: 60px; width: 60px">
+            <img src="{{pokemon.imagenUrl}}" style="height: 60px; width: 60px">
           </div>
           <div class="col-sm-5">
-            <h5>Nombre Ingrediente:{{ingrediente.nombreIngrediente}}</h5>
-            <h5>Tipo Ingrediente:{{ingrediente.tipoIngrediente}}</h5>
-            <button mat-button (click)="seleccionarIngrediente(ingrediente)">Seleccionar</button>
+            <h5>Nombre Pokemon:{{pokemon.nombrePokemon}}</h5>
+            <h5>Poder Especial:{{pokemon.poderEspecialDos}}</h5>
+            <button mat-button (click)="seleccionarIngrediente(pokemon)">Seleccionar</button>
           </div>
           <div class="col-sm-1"></div>
         </div>

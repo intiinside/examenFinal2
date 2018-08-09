@@ -5,7 +5,7 @@ import {ComidaService} from "../services/comida.service";
 import {IngredienteService} from "../services/ingrediente.service";
 import {ActivatedRoute, Router} from "@angular/router";
 @Component({
-  selector: 'app-comida',
+  selector: 'app-entrenador',
   templateUrl: './entrenador.component.html',
   styleUrls: ['./entrenador.component.css'],
   providers: [IngredienteService,ComidaService]
@@ -21,7 +21,7 @@ export class ComidaComponent implements OnInit {
   }
   seleccionarIngrediente(ingrediente:IngredienteInterface){
     IngredienteService.ingredienteSeleccionado=ingrediente;
-    const url = ['/ingrediente'];
+    const url = ['/pokemon'];
     this._router.navigate(url);
   }
 

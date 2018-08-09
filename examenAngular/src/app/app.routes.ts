@@ -2,7 +2,7 @@ import {HomeComponent} from "./home/home.component";
 import {Routes} from "@angular/router";
 import {ComidaComponent} from "./classEntrenador/entrenador.component";
 import {CarritocomprasComponent} from "./carritocompras/carritocompras.component";
-import {IngredienteComponent} from "./ingrediente/pokemon.component";
+import {PokemonComponent} from "./classPokemon/pokemon.component";
 
 
 export const routes: Routes = [
@@ -10,14 +10,14 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent },
   {
-    path: 'ingrediente',
-    component: IngredienteComponent },
+    path: 'pokemon',
+    component: PokemonComponent },
   {
     path: 'comida',
     component: ComidaComponent,
     children: [{
-      path: 'ingrediente',
-      component: IngredienteComponent
+      path: 'pokemon',
+      component: PokemonComponent
     }]
   },
   {
