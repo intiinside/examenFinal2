@@ -17,6 +17,9 @@ import {MatInputModule} from '@angular/material/input';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {routes} from "./app.routes";
+//import {NavBarComponent } from './barra-busqueda.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,7 @@ import {routes} from "./app.routes";
     IngredienteComponent,
     CarritocomprasComponent,
     BarraBusquedaComponent
+   // NavBarComponent
   ],
   imports: [
     BrowserModule,

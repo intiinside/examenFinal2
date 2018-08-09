@@ -30,7 +30,7 @@ module.exports = {
       type:'string'
     },
     comidaId:{
-      model:'comida'
+      model:'entrenador'
     }
   },
 
