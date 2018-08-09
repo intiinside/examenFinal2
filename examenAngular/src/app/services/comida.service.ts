@@ -19,11 +19,11 @@ export class ComidaService {
   }
 
   obtenerComidas() {
-    return this.http.get("http://localhost:1337/comida", {headers: ComidaService.getCommonHeaders()});
+    return this.http.get("http://localhost:1337/classEntrenador", {headers: ComidaService.getCommonHeaders()});
   }
   buscarComidas(parametro){
     let header = IngredienteService.getCommonHeaders();
-    return this.http.get('http://localhost:1337/comida?where={"nombrePlato":{"contains":"' + parametro+ '"}}'
+    return this.http.get('http://localhost:1337/classEntrenador?where={"nombrePlato":{"contains":"' + parametro+ '"}}'
       ,{headers: header});
   }
 }

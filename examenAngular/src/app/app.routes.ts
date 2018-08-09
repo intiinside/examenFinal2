@@ -1,8 +1,8 @@
 import {HomeComponent} from "./home/home.component";
 import {Routes} from "@angular/router";
-import {ComidaComponent} from "./comida/comida.component";
+import {ComidaComponent} from "./classEntrenador/entrenador.component";
 import {CarritocomprasComponent} from "./carritocompras/carritocompras.component";
-import {IngredienteComponent} from "./ingrediente/ingrediente.component";
+import {IngredienteComponent} from "./ingrediente/pokemon.component";
 
 
 export const routes: Routes = [

@@ -8,9 +8,9 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-ingrediente',
-  templateUrl: './ingrediente.component.html',
+  templateUrl: './pokemon.component.html',
   providers : [ComidaService,IngredienteService,CarritoService],
-  styleUrls: ['./ingrediente.component.css']
+  styleUrls: ['./pokemon.component.css']
 })
 export class IngredienteComponent implements OnInit {
   comida:ComidaInterface;

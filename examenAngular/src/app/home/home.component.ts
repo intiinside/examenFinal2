@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
   seleccionarComida(comida:ComidaInterface){
     console.log(comida);
     ComidaService.comidaSeleccionada=comida;
-    const url = ['/comida'];
+    const url = ['/classEntrenador'];
     this._router.navigate(url);
   }
 }

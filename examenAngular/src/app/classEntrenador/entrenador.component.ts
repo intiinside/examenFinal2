@@ -6,8 +6,8 @@ import {IngredienteService} from "../services/ingrediente.service";
 import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: 'app-comida',
-  templateUrl: './comida.component.html',
-  styleUrls: ['./comida.component.css'],
+  templateUrl: './entrenador.component.html',
+  styleUrls: ['./entrenador.component.css'],
   providers: [IngredienteService,ComidaService]
 })
 export class ComidaComponent implements OnInit {

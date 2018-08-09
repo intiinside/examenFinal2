@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComidaComponent } from './comida.component';
+import { ComidaComponent } from './entrenador.component';
 
 describe('ComidaComponent', () => {
   let component: ComidaComponent;
