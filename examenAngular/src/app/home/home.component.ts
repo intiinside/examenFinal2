@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
   seleccionarEntrenador(entrenador:EntrenadorInterface){
     console.log(entrenador);
     EntrenadorService.entrenadorSeleccionada=entrenador;
-    const url = ['/classEntrenador'];
+    const url = ['/entrenador'];
     this._router.navigate(url);
   }
 }

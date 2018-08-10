@@ -19,11 +19,11 @@ export class EntrenadorService {
   }
 
   obtenerEntrenador() {
-    return this.http.get("http://localhost:1337/classEntrenador", {headers: EntrenadorService.getCommonHeaders()});
+    return this.http.get("http://localhost:1337/entrenador", {headers: EntrenadorService.getCommonHeaders()});
   }
   buscarEntrenador(parametro){
     let header = PokemonService.getCommonHeaders();
-    return this.http.get('http://localhost:1337/classEntrenador?where={"nombreEntrenador":{"contains":"' + parametro+ '"}}'
+    return this.http.get('http://localhost:1337/entrenador?where={"nombreEntrenador":{"contains":"' + parametro+ '"}}'
       ,{headers: header});
   }
 }
