@@ -1,0 +1,45 @@
+<h2>Nombre Entrenador:{{entrenador.nombreEntrenador}}</h2>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-3">
+    <h4>Apellido:{{entrenador.apellidoEntrenador}}</h4>
+    <h4>Fecha Nacimiento:{{entrenador.fechaNacimiento}}</h4>
+    <h4>Número de Medallas:{{entrenador.numeroMedallas}}</h4>
+  </div>
+  <div class="col-sm-3">
+    <h4>Campeón actual:{{entrenador.campeonActual}}</h4>
+  </div>
+  <div class="col-sm-5">
+    <img src="{{entrenador.imagenUrl}}" style="width: 80%;height: 80%">
+  </div>
+</div>
+<br>
+<h2>Pokemon</h2>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="row">
+      <div *ngFor="let pokemon of pokemon" class="col-sm-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="{{pokemon.imagenUrl}}" style="height: 60px; width: 60px">
+          </div>
+          <div class="col-sm-5">
+            <h5>Nombre Pokemon:{{pokemon.nombrePokemon}}</h5>
+            <h5>Poder Especial:{{pokemon.poderEspecialDos}}</h5>
+            <button mat-button (click)="seleccionarPokemon(pokemon)">Seleccionar</button>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-5"></div>
+  <div class="col-sm-2">
+    <button mat-raised-button color="primary">Cargar Mas</button>
+  </div>
+  <div class="col-sm-5"></div>
+</div>

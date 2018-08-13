@@ -1,0 +1,45 @@
+<h2>Nombre Plato:{{comida.nombrePlato}}</h2>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-3">
+    <h4>Descripción Plato:{{comida.descripcionPlato}}</h4>
+    <h4>Nacionalidad:{{comida.nacionalidad}}</h4>
+    <h4>N° de Personas:{{comida.numeroPersonas}}</h4>
+  </div>
+  <div class="col-sm-3">
+    <h4>Picante:{{comida.picante}}</h4>
+  </div>
+  <div class="col-sm-5">
+    <img src="{{comida.imagenUrl}}" style="width: 80%;height: 80%">
+  </div>
+</div>
+<br>
+<h2>Ingredientes</h2>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="row">
+      <div *ngFor="let ingrediente of ingredientes" class="col-sm-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="{{ingrediente.imagenUrl}}" style="height: 60px; width: 60px">
+          </div>
+          <div class="col-sm-5">
+            <h5>Nombre Ingrediente:{{ingrediente.nombreIngrediente}}</h5>
+            <h5>Tipo Ingrediente:{{ingrediente.tipoIngrediente}}</h5>
+            <button mat-button (click)="seleccionarIngrediente(ingrediente)">Seleccionar</button>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-5"></div>
+  <div class="col-sm-2">
+    <button mat-raised-button color="primary">Cargar Mas</button>
+  </div>
+  <div class="col-sm-5"></div>
+</div>
